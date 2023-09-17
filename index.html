@@ -7,10 +7,21 @@
     <!-- Links -->
     <link rel="icon" type="image/png" sizes="16x16"  href="/favicons/favicon-16x16.png">
     <link rel="stylesheet" href="./css/style.css">
-
+    
+    <!-- Audios -->
+    <audio
+    src="./audio/pokemonSoundtrack.mp3"
+    class="soundtrack"
+    preload = "auto";
+    loop = true;
+    autoplay = true;
+    muted = true;
+    ></audio>
+    <audio src="./audio/click.mp3" class="click" soundClick.volume = 0.3;></audio>
+   
     <!-- Main JS -->
     <script defer src="./js/script.js"></script>
-
+    
     <title>Pokedéx</title>
 </head>
 <body>
@@ -34,10 +45,15 @@
         </form>
 
         <div class="buttons">
-            <button class="button btn-prev"><- Prev</button>
-            <button class="button btn-next">Next -></button>
-        </div>
+            <div class="nextPrev">
+                <button class="button btn-prev"><- Prev</button>
+                <button class="button btn-next">Next -></button>
+            </div>
 
+            <button class="button btn-sound">Music</button>
+            <button class="button btn-status">Pokemon Status</button>
+        </div>
+        
         <img src="./images/pokedex.png" alt="pokedex" class="pokedex">
 
     </main>

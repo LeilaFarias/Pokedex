@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
-/*
-setando a fonte
-*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Oxanium', cursive;
 }
-
 
 body {
     text-align: center;
@@ -75,28 +71,46 @@ main {
 
 .buttons {
     position: absolute;
-    bottom: 10%;
-    left: 50%;
-    width: 65%;
+    bottom: 7.5%;
+    left: 40%;
+    width: 60%;
+    max-width: 200px;
     transform: translate(-57%, 0);
-    display: flex;
-    gap: 20px;
+    display: inline;
+
 }
 
 .button {
-    width: 50%;
+    width: 40%;
     padding: 4%;
     border: 3px solid #000;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: clamp(8px, 5vw, 1rem); 
     font-weight: 600;
     color: white;
     background-color: #444;
+    margin: 2%;
 
     box-shadow: -3px 4px 0 #222, -4px 6px 0 #000;
 }
 
+.nextPrev{
+    width: 140%;
+    padding: 3px;
+    transform: translate(0, 16%);
+}
+
+.btn-status{
+    width: 50%;
+    transform: translate(52%, 0);
+}
+
+.btn-sound{
+    padding: 8%;
+    width: 40%;
+    transform: translate(40%, 10px);
+}
+
 .button:active{
     box-shadow: inset -4px 4px 0 #222;
-    font-size: 0.9rem;
 }

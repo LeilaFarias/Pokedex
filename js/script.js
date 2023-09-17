@@ -7,7 +7,10 @@ const input = document.querySelector('.input_search');
 
 const buttonPrev = document.querySelector('.btn-prev');
 const buttonNext = document.querySelector('.btn-next');
+const buttonSound = document.querySelector('.btn-sound');
 
+var soundtrack = document.querySelector('.soundtrack');
+var soundClick = document.querySelector('.click');
 let searchPokemon = 1;
 
 const fetchPokemon = async (pokemon) => {
@@ -53,6 +56,9 @@ form.addEventListener('submit', (event) =>{
 })
 
 buttonPrev.addEventListener('click', () =>{
+    soundClick.volume = 0.3;
+    soundClick.play();
+
     if (searchPokemon > 1){
         searchPokemon -= 1;
         renderPokemon(searchPokemon);
@@ -60,8 +66,29 @@ buttonPrev.addEventListener('click', () =>{
 })
 
 buttonNext.addEventListener('click', () =>{
+    soundClick.volume = 0.3;
+    soundClick.play();
+
     searchPokemon += 1;
     renderPokemon(searchPokemon);
 })
+
+buttonSound.addEventListener('click', () => {
+    soundClick.volume = 0.3;
+    soundClick.play();
+
+    if(!soundtrack.paused){
+        soundtrack.pause();
+    } else {
+        soundtrack.muted = false;
+        prepareSound(soundtrack);
+        soundtrack.play();
+    }
+  });
+
+function prepareSound(audio){
+    audio.currentTime = 13;
+    audio.volume = 0.05;
+}
 
 renderPokemon(searchPokemon);
